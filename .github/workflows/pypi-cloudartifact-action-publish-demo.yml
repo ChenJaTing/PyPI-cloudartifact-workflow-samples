@@ -11,13 +11,13 @@ jobs:
       - uses: actions/checkout@v2
 
         # GitHub Action环境默认python版本为3.8.X，可以根据自己项目需求修改python版本
-      - name: Setup node
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: 3.8
 
         # 华为云CloudArtifact PyPI 私仓配置 
-      - name: Setup HuaweiCloud PyPI CloudArtifact
+      - name: Setup Huawei Cloud PyPI CloudArtifact
         uses: huaweicloud/PyPI-cloudartifact-action@v1.0.0
         with: 
           pypi-operation-type: upload
