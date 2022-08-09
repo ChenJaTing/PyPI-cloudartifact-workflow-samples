@@ -18,7 +18,7 @@ jobs:
 
         # 华为云CloudArtifact PyPI 私仓配置 
       - name: Setup Huawei Cloud PyPI CloudArtifact
-        uses: huaweicloud/PyPI-cloudartifact-action@v1.0.0
+        uses: huaweicloud/PyPI-cloudartifact-action@v1.1.0
         with: 
           pypi-operation-type: upload
           repository: '<repository URL>'
