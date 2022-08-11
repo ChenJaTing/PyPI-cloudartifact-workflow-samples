@@ -2,7 +2,7 @@ name: PyPI Cloudartifact Action Install Demo
 on:
   push:
     branches:
-       master1
+       master
 jobs:
   Install-from-CloudArtifact-PyPI:
     runs-on: ubuntu-latest
@@ -23,10 +23,10 @@ jobs:
         uses: huaweicloud/PyPI-cloudartifact-action@v1.1.0
         with: 
           pypi-operation-type: install
-          index-url: '<repository URL with authentication>'
-          trusted-host: '<repository URL host>'
+          index-url: 'https://${{ secrets.PyPI_AUTH }}@devrepo.devcloud.cn-north-4.huaweicloud.com/artgalaxy/api/pypi/cn-north-4_dfbdbf2e511e40fa88ba1d653358d65c_pypi_0/simple'
+          trusted-host: 'devrepo.devcloud.cn-north-4.huaweicloud.com'
 
         # 拉取CloudArtifact PyPI 私仓的PyPI package  
       - name: Install PyPI package 
         run: |
-          pip install <PyPI name>
+          pip install demo==1.0 --verbose
