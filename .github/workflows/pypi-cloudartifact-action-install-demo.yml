@@ -2,7 +2,7 @@ name: PyPI Cloudartifact Action Install Demo
 on:
   push:
     branches:
-       master
+       master1
 jobs:
   Install-from-CloudArtifact-PyPI:
     runs-on: ubuntu-latest
